@@ -1,20 +1,20 @@
-$primary-color: #0074c2;
-$secondary-color: #4c4c4c;
-$primary-background: #ffffff;
-$secondary-background: #f2f2f2;
-$input-background: #ffffff;
-$font-color: black;
-$font-family: "Montserrat", sans-serif;
-$header-font-color: $font-color;
-$header-background: $primary-background;
-$meganav-font-color: $font-color;
-$meganav-background: $primary-background;
-$footer-font-color: $font-color;
-$footer-background: $primary-background;
-$secondary-font-color: $font-color;
-$global-border-style: #e2e2e2;
-$second-global-border: #e2e2e2;
-$spree-header-max-width: 1440px;
-$spree-header-mobile-height: 50px;
-$spree-header-tablet-height: 75px;
-$spree-header-desktop-height: 75px;
+$primary-color: #0074c2; //メインカラー ボタンなど
+$secondary-color: #4c4c4c; //セカンダリーカラー 入力項目など
+$primary-background: #ffffff; //メイン背景
+$secondary-background: #f2f2f2; // セカンダリー背景 Fashon Trends
+$input-background: #ffffff; //入力項目
+$font-color: black; //フォントカラー
+$font-family: "Montserrat", sans-serif; //フォントの種類
+$header-font-color: $font-color; //ヘッダーフォントカラー メニュー含む
+$header-background: $primary-background; //ヘッダー背景
+$meganav-font-color: $font-color; //メガナビのフォントカラー
+$meganav-background: $primary-background; //メガナビの背景
+$footer-font-color: $font-color; //フッターのフォント
+$footer-background: $primary-background; //フッター背景
+$secondary-font-color: $font-color; //セカンダリーフォントカラー アカウント,クレジットなど
+$global-border-style: #e2e2e2; //ボーダー
+$second-global-border: #e2e2e2; //入力項目のボーダー
+$spree-header-max-width: 1440px; //ヘッダーの横最大
+$spree-header-mobile-height: 50px; //モバイルヘッダーの高さ
+$spree-header-tablet-height: 75px; //タブレットの高さ
+$spree-header-desktop-height: 75px; //デスクトップの高さ

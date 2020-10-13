@@ -1,5 +1,5 @@
 <% @body_id = 'home' %>
-
+<!-- ■ Main Banner -->
 <div class="homepage-hero-image mb-3 position-relative">
   <img class="lazyload hero-image position-absolute"
     data-src="<%= asset_path('homepage/main_banner.jpg') %>"
@@ -18,8 +18,8 @@
 
 <div class="container">
   <div class="row">
+    <!-- ■ Category Banner Men and Sportwear -->
     <div class="col-6">
-
       <div class="homepage-taxon-box mb-3">
         <%= link_to spree.nested_taxons_path('men') do %>
           <img class="w-100 lazyload"
@@ -49,7 +49,7 @@
     </div>
 
     <div class="col-6 d-flex flex-column">
-
+      <!-- ■ Category Banner Women -->
       <div class="homepage-taxon-box flex-grow-1">
         <%= link_to spree.nested_taxons_path('women') do %>
           <img class="w-100 lazyload"
@@ -66,9 +66,9 @@
     </div>
   </div>
 </div>
-
+<!-- ■ Carousel BestSellers -->
 <div data-product-carousel data-product-carousel-taxon-id='bestsellers' class="my-3"></div>
-
+<!-- ■ Fashion Trends-->
 <div class="homepage-fashion-trends-box mb-3">
   <div class="text-center">
     <div class="homepage-fashion-trends-box-summer-text mb-1"><%= Spree.t('homepage.summer_2019') %></div>
@@ -79,10 +79,9 @@
     <%= link_to Spree.t('homepage.read_more'), spree.nested_taxons_path('trending'), class: 'btn px-5 spree-btn btn-outline-primary' %>
   </div>
 </div>
-
-
+<!-- ■ Carousel Fashion Trends-->
 <div data-product-carousel data-product-carousel-taxon-id='trending' class="mb-3"></div>
-
+<!-- ■ Promotion-->
 <div class="container">
   <div class="row">
     <div class="col-12 col-lg-6">
