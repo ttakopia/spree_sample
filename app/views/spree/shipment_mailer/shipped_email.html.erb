@@ -1,0 +1,51 @@
+<table class="row header">
+  <tr>
+    <td>
+      <p class="lede">
+        <%= @shipment.order.name %>様<br>
+      </p>
+       <p>
+        この度は、ご注文をいただきまして、誠にありがとうございます。<br>
+        ご注文の製品を本日発送させていただきましたのでお知らせいたします。
+      </p>
+      <p>
+        □注文番号:
+        <%= @shipment.order.number %>
+      </p>
+      <p>
+        お届けは、日本郵便のクリックポストになります。<br>
+        出荷後2~3日以内に届く予定です。<br>
+      </p>
+      <% if @shipment.tracking %>
+        <p>
+          <%= Spree.t('shipment_mailer.shipped_email.track_information', tracking: @shipment.tracking) %>
+        </p>
+      <% end %>
+      <% if @shipment.tracking_url %>
+        追跡サービスURL:
+        <%= link_to @shipment.tracking_url + @shipment.tracking, @shipment.tracking_url + @shipment.tracking, { :target => "_blank" } %>
+      <% end %>
+       <p>
+        ◾️お届け先<br>
+        お名前：<%= @shipment.order.ship_address.full_name %><br>
+        電話番号：<%= @shipment.order.ship_address.phone %><br>
+        郵便番号：<%= @shipment.order.ship_address.zipcode %><br>
+        　  住所：<%= @shipment.order.ship_address.state %><%= @shipment.order.ship_address.city %><%= @shipment.order.ship_address.address1 %><%= @shipment.order.ship_address.address2 %>
+      </p><br>
+      <p>
+        お客様の都合によるキャンセルはお受けできません。予めご了承下さい。
+      </p>
+      <p>
+        --------------------------------------------------------------------------<br>
+        サンプルECサイト<br>
+        Mail:
+        "任意のメールアドレス"<br>
+        （土日祝、夏期休暇、年末年始除く10：00〜17：00）<br>
+        URL:https://<br>
+        --------------------------------------------------------------------------
+      </p>
+    </td>
+    <td class="expander"></td>
+  </tr>
+</table>
+
