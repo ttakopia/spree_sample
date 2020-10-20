@@ -37,12 +37,25 @@
     </div>
 
     <%= render partial: 'gallery_modal' %>
-  </div>
   <div id="related-products"></div>
 
   <%= products_structured_data([@product]) %>
-
   <%= render 'spree/shared/product_added_modal' %>
+  <% if @product.relations.any? %>
+    <div class="mt-5">
+      <p class="font-weight-bold text-center homepage-carousel-text text-uppercase">
+        この商品を見ている人におすすめ
+      </p>
+    </div>
+    <div class="row">
+      <% @product.relations.each do |relation| %>
+        <div class="col-6 col-sm-3 mb-2">
+          <%= render 'spree/shared/product', product: relation.related_to, image_class: 'w-100' %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  </div>
 <% end %>
 
 <div
